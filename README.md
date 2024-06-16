@@ -6,6 +6,7 @@ Brief description or overview of the project.
 
 1. [Installation](#installation)
 2. [Usage](#usage)
+2. [Testing](#testing)
 
 ## Installation
 
@@ -21,8 +22,10 @@ Brief description or overview of the project.
 
 2. **Run the project**
 
+  ```bash
   npm run dev
-  Open http://localhost:5173 to view it in the browser.
+
+  open http://localhost:5173 to view it in the browser.
 
 3. **Run tests for the project**
 
