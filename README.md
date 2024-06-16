@@ -22,9 +22,8 @@ Brief description or overview of the project.
 
 2. **Run the project**
 
-  ```bash
   npm run dev
-
+  
   open http://localhost:5173 to view it in the browser.
 
 
