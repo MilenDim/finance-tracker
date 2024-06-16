@@ -1,0 +1,60 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "description": "Salary",
+            "amount": 5000,
+            "type": "income",
+            "category": "Job",
+            "date": "2024-06-01"
+        },
+        {
+            "id": 2,
+            "description": "Groceries",
+            "amount": 150,
+            "type": "expense",
+            "category": "Food",
+            "date": "2024-06-02"
+        },
+        {
+            "id": 3,
+            "description": "Clothes",
+            "amount": 300,
+            "type": "expense",
+            "category": "Other",
+            "date": "2024-05-28"
+        },
+        {
+            "id": 4,
+            "description": "Bills",
+            "amount": 500,
+            "type": "expense",
+            "category": "Utilities",
+            "date": "2024-05-23"
+        },
+        {
+            "id": 5,
+            "description": "Fitness Card",
+            "amount": 100,
+            "type": "expense",
+            "category": "Health",
+            "date": "2024-06-06"
+        },
+        {
+            "id": 6,
+            "description": "Vacation Booking",
+            "amount": 350,
+            "type": "expense",
+            "category": "Travel",
+            "date": "2024-06-15"
+        },
+        {
+            "id": 7,
+            "description": "Sports Bet Winnings",
+            "amount": 300,
+            "type": "income",
+            "category": "Other",
+            "date": "2024-05-20"
+        }
+    ]
+}
