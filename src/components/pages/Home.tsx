@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box, Button, Text, Heading } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
+import { Box, Button, Text, Heading } from '@chakra-ui/react';
 
-const Dashboard: React.FC = () => {
+const Dashboard = (): React.ReactElement => {
   const navigate = useNavigate();
 
   const navigateToTransactions = () => {

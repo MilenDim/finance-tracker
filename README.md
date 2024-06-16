@@ -22,7 +22,7 @@ Brief description or overview of the project.
 2. **Run the project**
 
   npm run dev
- <!-- Open http://localhost:5173 to view it in the browser. -->
+  Open http://localhost:5173 to view it in the browser.
 
 3. **Run tests for the project**
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Box, Select, Button } from "@chakra-ui/react";
 import DatePicker from "react-datepicker";
+import { Box, Select, Button } from "@chakra-ui/react";
 import "react-datepicker/dist/react-datepicker.css";
 import {
   setCategoryFilter,
@@ -10,7 +10,7 @@ import { categories } from "../../../constants/constants";
 import { RootState } from "../../../redux/store";
 import { useAppSelector, useAppDispatch } from "../../../redux/hooks";
 
-const TransactionFilter: React.FC = () => {
+const TransactionFilter = (): React.ReactElement => {
   const dispatch = useAppDispatch();
   const { categoryFilter, dateRangeFilter } = useAppSelector(
     (state: RootState) => state.transactionReducer

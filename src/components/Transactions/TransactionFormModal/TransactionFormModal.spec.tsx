@@ -1,12 +1,12 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
+import { Store, UnknownAction } from '@reduxjs/toolkit';
 import configureStore, { MockStoreEnhanced } from 'redux-mock-store';
 import { ChakraProvider } from '@chakra-ui/react';
 import TransactionFormModal from './TransactionFormModal';
-import { addTransaction, editTransaction } from '../../../redux/slices/transactionSlice';
-import { Transaction, TransactionTypes } from '../../../types/transactions';
 import { useAppDispatch } from '../../../redux/hooks';
-import { Store, UnknownAction } from '@reduxjs/toolkit';
+import { Transaction, TransactionTypes } from '../../../types/transactions';
+import { addTransaction, editTransaction } from '../../../redux/slices/transactionSlice';
 
 jest.mock('../../../redux/hooks', () => ({
   useAppDispatch: jest.fn(),

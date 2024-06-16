@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import configureStore, { MockStoreEnhanced } from 'redux-mock-store';
+import { Store, UnknownAction } from '@reduxjs/toolkit';
 import { ChakraProvider } from '@chakra-ui/react';
 import TransactionDetailsModal from './TransactionDetailsModal';
-import { Store, UnknownAction } from '@reduxjs/toolkit';
 
 const mockStore = configureStore([]);
 
-describe('TransactionDetailsModal', () => {
+describe('TransactionDetailsModal Component', () => {
   let store: MockStoreEnhanced<unknown> | Store<unknown, UnknownAction, unknown>;
 
   beforeEach(() => {

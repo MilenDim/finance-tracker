@@ -1,9 +1,9 @@
 import React from "react";
 import { Box, Text, Button, useDisclosure } from "@chakra-ui/react";
-import TransactionDetailsModal from "../TransactionDetailsModal/TransactionDetailsModal";
 import { Transaction } from "../../../types/transactions";
 import { useAppDispatch } from "../../../redux/hooks";
 import { deleteTransaction } from "../../../redux/slices/transactionSlice";
+import TransactionDetailsModal from "../TransactionDetailsModal/TransactionDetailsModal";
 import TransactionFormModal from "../TransactionFormModal/TransactionFormModal";
 
 interface TransactionCardProps {
@@ -13,13 +13,21 @@ interface TransactionCardProps {
 const TransactionCard = ({
   transaction,
 }: TransactionCardProps): React.ReactElement => {
-    const dispatch = useAppDispatch();
-    const { isOpen: isDetailsOpen, onOpen: onDetailsOpen, onClose: onDetailsClose } = useDisclosure();
-    const { isOpen: isEditOpen, onOpen: onEditOpen, onClose: onEditClose } = useDisclosure();
-  
-    const handleDelete = () => {
-      dispatch(deleteTransaction(transaction.id));
-    };
+  const dispatch = useAppDispatch();
+  const {
+    isOpen: isDetailsOpen,
+    onOpen: onDetailsOpen,
+    onClose: onDetailsClose,
+  } = useDisclosure();
+  const {
+    isOpen: isEditOpen,
+    onOpen: onEditOpen,
+    onClose: onEditClose,
+  } = useDisclosure();
+
+  const handleDelete = () => {
+    dispatch(deleteTransaction(transaction.id));
+  };
 
   return (
     <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p="6" mb="4">
@@ -38,8 +46,16 @@ const TransactionCard = ({
           Delete
         </Button>
       </Box>
-      <TransactionDetailsModal isOpen={isDetailsOpen} onClose={onDetailsClose} transactionId={transaction.id} />
-      <TransactionFormModal isOpen={isEditOpen} onClose={onEditClose} transaction={transaction} />
+      <TransactionDetailsModal
+        isOpen={isDetailsOpen}
+        onClose={onDetailsClose}
+        transactionId={transaction.id}
+      />
+      <TransactionFormModal
+        isOpen={isEditOpen}
+        onClose={onEditClose}
+        transaction={transaction}
+      />
     </Box>
   );
 };

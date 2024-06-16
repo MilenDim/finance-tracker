@@ -1,9 +1,9 @@
 import React from "react";
-import { useAppSelector, useAppDispatch } from "../../../redux/hooks";
-import { setCategoryFilter } from "../../../redux/slices/transactionSlice";
-import { RootState } from "../../../redux/store";
 import { Select } from "@chakra-ui/react";
 import { categories } from "../../../constants/constants";
+import { RootState } from "../../../redux/store";
+import { useAppSelector, useAppDispatch } from "../../../redux/hooks";
+import { setCategoryFilter } from "../../../redux/slices/transactionSlice";
 
 const CategoryFilter = (): React.ReactElement => {
   const dispatch = useAppDispatch();

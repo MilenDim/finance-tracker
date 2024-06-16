@@ -1,6 +1,4 @@
 import React from "react";
-import { useAppSelector } from "../../../redux/hooks";
-import { RootState } from "../../../redux/store";
 import {
   Modal,
   ModalOverlay,
@@ -12,6 +10,8 @@ import {
   Button,
   Text,
 } from "@chakra-ui/react";
+import { RootState } from "../../../redux/store";
+import { useAppSelector } from "../../../redux/hooks";
 
 interface TransactionDetailsModalProps {
   isOpen: boolean;

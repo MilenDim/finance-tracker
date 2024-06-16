@@ -5,7 +5,7 @@ import Summary from '../Transactions/Summary/Summary';
 import TransactionFormModal from '../Transactions/TransactionFormModal/TransactionFormModal';
 import TransactionsFilter from '../Transactions/TransactionsFilter/TransactionsFilter';
 
-const Transactions: React.FC = () => {
+const Transactions = (): React.ReactElement => {
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
 
   const openFormModal = () => setIsFormModalOpen(true);

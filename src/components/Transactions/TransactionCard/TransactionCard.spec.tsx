@@ -1,10 +1,10 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import configureStore, { MockStoreEnhanced } from 'redux-mock-store';
 import { ChakraProvider } from '@chakra-ui/react';
+import { Provider } from 'react-redux';
+import { Store, UnknownAction } from '@reduxjs/toolkit';
+import configureStore, { MockStoreEnhanced } from 'redux-mock-store';
 import TransactionCard from './TransactionCard';
 import { deleteTransaction } from '../../../redux/slices/transactionSlice';
-import { Store, UnknownAction } from '@reduxjs/toolkit';
 
 jest.mock('../../../redux/hooks', () => ({
   useAppDispatch: jest.fn(),
@@ -22,7 +22,7 @@ const transaction = {
   date: '2024-06-01',
 };
 
-describe('TransactionCard', () => {
+describe('TransactionCard Component', () => {
   let store: MockStoreEnhanced<unknown> | Store<unknown, UnknownAction, unknown>;
   let mockDispatch: jest.Mock<unknown>;
 
@@ -34,7 +34,6 @@ describe('TransactionCard', () => {
     });
 
     mockDispatch = jest.fn();
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const { useAppDispatch, useAppSelector } = require('../../../redux/hooks');
     useAppDispatch.mockReturnValue(mockDispatch);
     useAppSelector.mockReturnValue({ transactions: [transaction] });
@@ -69,7 +68,7 @@ describe('TransactionCard', () => {
     );
 
     fireEvent.click(screen.getByText('Details'));
-    // Adjust the following line based on your modal content
+
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
 
@@ -83,7 +82,7 @@ describe('TransactionCard', () => {
     );
 
     fireEvent.click(screen.getByText('Edit'));
-    // Adjust the following line based on your modal content
+
     expect(screen.getByRole('dialog')).toBeInTheDocument();
   });
 

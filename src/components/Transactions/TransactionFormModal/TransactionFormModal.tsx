@@ -12,10 +12,10 @@ import {
   Input,
   Select,
 } from "@chakra-ui/react";
-import { addTransaction, editTransaction } from "../../../redux/slices/transactionSlice";
-import { Transaction, TransactionTypes } from "../../../types/transactions";
 import { categories } from "../../../constants/constants";
 import { useAppDispatch } from "../../../redux/hooks";
+import { Transaction, TransactionTypes } from "../../../types/transactions";
+import { addTransaction, editTransaction } from "../../../redux/slices/transactionSlice";
 
 interface TransactionFormModalProps {
   isOpen: boolean;
